@@ -1,0 +1,285 @@
+/* reset */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1a1a1a;
+  background-color: #fff;
+}
+
+* {
+  font-family: "Pretendard", "Noto Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:focus {
+  transition: 0.3s;
+}
+
+button,
+a {
+  background: none;
+  border: 0;
+  color: inherit !important;
+  text-decoration: none !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* -------------------------------------------- html5 block ------------------------------------------ */
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  -webkit-text-size-adjust: none;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  word-break: keep-all;
+}
+ol,
+ul,
+li {
+  list-style: none;
+  margin-bottom: 0 !important;
+}
+ul {
+  padding-left: 0;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+iframe,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
+}
+.blind,
+legend {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f0f7;
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.whole_layout {
+  width: 100%;
+  max-width: 1280px;
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.medal_update {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+  align-items: flex-end;
+}
+
+.medal_update p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.medal_update input {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.medal_update button {
+  width: 48%;
+  height: 38px;
+  margin: 1%;
+  background: #fcc300;
+  border-radius: 5px;
+}
+
+.medal_update li {
+  flex: 1;
+}
+
+.medal_table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.medal_table th {
+  padding: 10px 0;
+  background: #002c71;
+  color: #fff;
+  border: 0;
+}
+
+.medal_table tbody tr:nth-child(odd) {
+  background: #e0e0f7;
+}
+.medal_table tbody tr:nth-child(even) {
+  background: #f1f0f7;
+}
+
+.medal_table tbody td {
+  padding: 10px 0;
+}
+
+.medal_table tbody td button span {
+  display: block;
+  padding: 3px 10px;
+  background: #d62c3a;
+  font-size: 14px;
+  color: white;
+  border-radius: 3px;
+}
