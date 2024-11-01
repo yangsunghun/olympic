@@ -1,8 +1,20 @@
-# React + Vite
+#올림픽 메달 집계
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##개요
+나라 이름을 입력할 텍스트 필드 금메달, 은메달, 동메달 수를 입력할 숫자 필드4개의 입력 필드가 있습니다.
+(각 필드는 0 이상의 숫자만 허용) 한 종류의 메달을 100개 이상 획득한 나라는 없으니 (지금까지), 최대 2자리의 숫자까지 입력이 가능합니다.폼에 입력된 데이터를 사용하여 국가별 메달 집계를 관리합니다
 
-Currently, two official plugins are available:
+##사용기술
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##설명
+
+- 폼 제출 버튼을 눌렀을 때 새로운 나라와 메달 수가 추가됩니다. 제출 후 모든 입력 필드는 빈 값으로 초기화됩니다.
+
+- CRUD(Create, Read, Update, Delete) 기능을 통해 국가별 데이터를 추가, 조회, 수정, 삭제할 수 있습니다.
+
+- 리스트에 표시된 국가는 금메달 수 기준으로 내림차순 정렬 됩니다.
+
+- 동일한 국가가 이미 리스트에 있을 경우, 사용자에게 경고 메시지를 표시하여 중복된 데이터를 방지합니다.
+
+- 존재하지 않는 국가에 대한 데이터를 수정하려고 할 때 사용자에게 알림을 표시합니다.

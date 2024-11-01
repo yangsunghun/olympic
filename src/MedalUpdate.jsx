@@ -15,18 +15,42 @@ const MedalUpdate = () => {
   });
 
   const inputGroups = [
-    { itemTitle: "국가명", inputType: "text", inputKey: "country" },
-    { itemTitle: "금메달", inputType: "number", inputKey: "gold" },
-    { itemTitle: "은메달", inputType: "number", inputKey: "silver" },
-    { itemTitle: "동메달", inputType: "number", inputKey: "bronze" },
+    {
+      itemTitle: "국가명",
+      inputType: "text",
+      inputKey: "country",
+      maxLength: 20,
+    },
+    {
+      itemTitle: "금메달",
+      inputType: "number",
+      inputKey: "gold",
+      maxLength: 2,
+    },
+    {
+      itemTitle: "은메달",
+      inputType: "number",
+      inputKey: "silver",
+      maxLength: 2,
+    },
+    {
+      itemTitle: "동메달",
+      inputType: "number",
+      inputKey: "bronze",
+      maxLength: 2,
+    },
   ];
 
-  const handleChange = (key, value) => {
-    const newValue = key !== "country" ? parseInt(value, 10) : value;
-    setInputValues((prevValues) => ({
-      ...prevValues,
-      [key]: newValue,
-    }));
+  const handleChange = (key, value, e) => {
+    const maxLength = e.target.maxLength; // maxLength 가져오기
+    // 숫자 형식으로 변환 후 문자열로 변환하여 길이 체크
+    if (value.length <= maxLength) {
+      const newValue = key !== "country" ? parseInt(value, 10) : value;
+      setInputValues((prevValues) => ({
+        ...prevValues,
+        [key]: newValue,
+      }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -102,7 +126,8 @@ const MedalUpdate = () => {
               itemTitle={item.itemTitle}
               inputType={item.inputType}
               inputValue={inputValues[item.inputKey]}
-              onChange={(e) => handleChange(item.inputKey, e.target.value)}
+              onChange={(e) => handleChange(item.inputKey, e.target.value, e)}
+              maxLength={item.maxLength}
             />
           ))}
           <li>
@@ -120,11 +145,22 @@ const MedalUpdate = () => {
   );
 };
 
-const MedalUpdateItem = ({ itemTitle, inputType, inputValue, onChange }) => {
+const MedalUpdateItem = ({
+  itemTitle,
+  inputType,
+  inputValue,
+  onChange,
+  maxLength,
+}) => {
   return (
     <li>
       <p>{itemTitle}</p>
-      <input type={inputType} value={inputValue} onChange={onChange} />
+      <input
+        type={inputType}
+        value={inputValue}
+        onChange={onChange}
+        maxLength={maxLength}
+      />
     </li>
   );
 };
